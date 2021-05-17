@@ -115,7 +115,10 @@ img{
 
 /* form */
 
-.form-item {}
+.form-item {
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+}
 
 .special-offer-link {
   display: inline-block;
@@ -192,8 +195,7 @@ img{
 
 .form-submit-button{
   width: 100%;
-  background: #fff;
-  background: #38CC8B;
+  background-color: #38CC8B;
   border: 0;
   box-shadow:  0px -4px 0px rgba(0, 0, 0, 0.09);
   border-radius: 5px;
@@ -204,7 +206,18 @@ img{
   letter-spacing: 1px;
   color: #FFFFFF;
   white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
+.form-submit-button:hover{
+    background-color: #38df96;
+
+}
+
+.form-submit-button:active{
+  opacity: 0.6;
+}
+
 
 .submit-button-info{
   font-weight: 500;
@@ -221,4 +234,5 @@ img{
   line-height: 26px;
   text-align: center;
   color: #FF7979;
+  text-decoration: none;
 }
