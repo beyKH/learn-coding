@@ -75,12 +75,14 @@ img{
   background-repeat: no-repeat;
   background-size: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .registration-container{
   display: flex;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
+
 }
 
 .registration-description {
@@ -149,7 +151,6 @@ img{
 
 }
 
-.label-field {}
 
 .input-field {
   width: 100%;
@@ -164,7 +165,17 @@ img{
   letter-spacing: 0.25px;
   color: #3D3B48;
   opacity: 0.75;
+  caret-color: #5E54A4;
+  /* outline: 1px solid #5E54A4; */
+  outline: none;
 }
+.input-field:focus{
+
+  border: 1px solid #5E54A4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 
 .label-field{
   position: absolute;
@@ -176,6 +187,8 @@ img{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
 
 .form-submit-button{
   width: 100%;
@@ -199,10 +212,10 @@ img{
   line-height: 26px;
   text-align: center;
   color: #BAB7D4;
+  margin-top: 10px;
 }
 
 .terms-and-services{
-  margin-bottom: 8px;
   font-weight: bold;
   font-size: 11px;
   line-height: 26px;
