@@ -235,4 +235,10 @@ img{
   text-align: center;
   color: #FF7979;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.terms-and-services:hover{
+  color: rgba(255, 121, 121, 0.7);
+
 }
