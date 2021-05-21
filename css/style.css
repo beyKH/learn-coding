@@ -151,6 +151,10 @@ img{
   border-radius: 5px;
 }
 .input-group {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end */
+  justify-content: flex-end;
 
 }
 
@@ -175,12 +179,56 @@ img{
 .input-field:focus{
 
   border: 1px solid #5E54A4;
+  background-color: transparent;
   box-sizing: border-box;
   border-radius: 5px;
 }
 
+.visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 
-.label-field{
+
+}
+
+.error-text{
+  display: none;
+  margin-left: auto;
+  text-align: right;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  /* padding-bottom: 20px; */
+  font-size: 11px;
+  line-height: 16px;
+  color: #FF7979;
+}
+.input-field:not(:placeholder-shown):not(:focus):invalid{
+  border: 1px solid #FF7979;
+  background-image: url("../img/icon-error.svg");
+  background-position: center right 16px;
+  background-repeat: no-repeat;
+}
+
+.input-field:not(:placeholder-shown):not(:focus):valid {
+  border: 1px solid #38CC8B;
+}
+
+
+
+.input-field:not(:placeholder-shown):not(:focus):invalid ~ .error-text {
+  display: block;
+}
+
+.input-field~.error-text:not(:placeholder-shown):not(:focus):valid {
+
+}
+
+/* .label-field{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -189,7 +237,7 @@ img{
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
 
 

@@ -21,23 +21,34 @@
         <a href="#" class="special-offer-link">Try it free 7 days <span class="special-offer-link-small">then 120/mo. thereafter</span></a>
         <form class="form-contact" action="https://echo.htmlacademy.ru" method="POST">
           <div class="input-group">
-            <label class="label-field" for="name-input">Name</label>
-            <input class="input-field" type="text" name="name" id="name-input" placeholder="Name" required>
+            <label class="label-field" for="name-input">
+              <input class="input-field" type="text" name="name" id="name-input" placeholder="Name" minlength="2" maxlength="30">
+              <p class="error-text ">First Name cannot be empty</p>
+            </label>
           </div>
 
           <div class="input-group">
-            <label class="label-field" for="input-last-name">Last name</label>
-            <input class="input-field" type="text" name="last-name" id="input-last-name" placeholder="Last Name" required>
+            <label class="label-field" for="input-last-name">
+              <input class="input-field" type="text" name="last-name" id="input-last-name" minlength="2"
+                placeholder="Last Name" required>
+                <p class="error-text ">cannot be empty</p>
+            </label>
           </div>
 
           <div class="input-group">
-            <label class="label-field" for="input-email">email</label>
-            <input class="input-field" type="email" name="email" id="input-email" placeholder="Email Address" required>
+            <label class="label-field" for="input-email">
+              <input class="input-field" type="email" name="email" id="input-email" placeholder="Email Address" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="1" maxlength="100">
+              <p class="error-text ">cannot be empty</p>
+            </label>
           </div>
 
           <div class="input-group">
-            <label class="label-field" for="input-password">password</label>
-              <input class="input-field" type="password" name="password" id="input-password" placeholder="Password" required>
+            <label class="label-field" for="input-password">
+              <input class="input-field" type="password" name="password" id="input-password" placeholder="Password" minlength="8"
+              " required>
+                <p class="error-text ">cannot be empty</p>
+            </label>
             </div>
 
             <button class="form-submit-button" type="submit">CLAIM YOUR FREE TRIAL</button>
